@@ -7,4 +7,5 @@ public interface IProductCommandRepository : ICommandRepository<Product>
 
 public interface IProductQueryRepository : IQueryRepository<Product>
 {
+    Task<bool> IsNameExistsAsync(string name, CancellationToken cancellationToken = default);
 }
