@@ -1,4 +1,5 @@
-﻿using ERP.Server.Domain.Contants;
+﻿using ERP.Server.Application.Services;
+using ERP.Server.Domain.Contants;
 using ERP.Server.Domain.Entities;
 using ERP.Server.Domain.Enums;
 using ERP.Server.Domain.Repositories;
@@ -8,7 +9,7 @@ using TS.Result;
 namespace ERP.Server.Application.Features.Products.CreateProduct;
 
 internal sealed class CreateProductCommandHandler(
-    IOutboxRepository outboxRepository,
+    OutboxService outboxService,
     IProductCommandRepository productCommandRepository,
     IProductQueryRepository productQueryRepository,
     IUnitOfWork unitOfWork) : IRequestHandler<CreateProductCommand, Result<string>>
@@ -32,13 +33,7 @@ internal sealed class CreateProductCommandHandler(
 
         #region Outbox
 
-        Outbox outbox = new()
-        {
-            TableName = TableNames.Product,
-            OperationName = OperationNames.Create,
-            RecordId = product.Id
-        };
-        await outboxRepository.CreateAsync(outbox, cancellationToken);
+        await outboxService.AddAsync(TableNames.Product, OperationNames.Create, product.Id, cancellationToken);
 
         #endregion
 

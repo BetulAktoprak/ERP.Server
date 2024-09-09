@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ERP.Server.Domain\ERP.Server.Domain.csproj" />
+	<InternalsVisibleTo Include="ERP.Server.WebAPI"/>
   </ItemGroup>
 
 </Project>

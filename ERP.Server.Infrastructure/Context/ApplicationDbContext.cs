@@ -22,17 +22,17 @@ internal sealed class ApplicationDbContext(DbContextOptions options) : DbContext
             if (entry.State == EntityState.Added)
             {
                 entry.Property(p => p.CreateAt)
-                .CurrentValue = DateTime.Now;
+                .CurrentValue = DateTime.Now.AddHours(3);
             }
             if (entry.State == EntityState.Modified)
             {
                 if (entry.Property(p => p.IsDeleted).CurrentValue == true)
                 {
                     entry.Property(p => p.DeleteAt)
-                    .CurrentValue = DateTime.Now;
+                    .CurrentValue = DateTime.Now.AddHours(3);
                 }
                 entry.Property(p => p.UpdateAt)
-                .CurrentValue = DateTime.Now;
+                .CurrentValue = DateTime.Now.AddHours(3);
             }
         }
 
