@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Server.Domain", "ERP.Server.Domain\ERP.Server.Domain.csproj", "{0FC6727E-ABE4-4A51-8E5F-67319C314906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.Server.Domain", "ERP.Server.Domain\ERP.Server.Domain.csproj", "{0FC6727E-ABE4-4A51-8E5F-67319C314906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Server.Application", "ERP.Server.Application\ERP.Server.Application.csproj", "{ADA744FE-C9DC-462A-A6AE-992D33BF3C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.Server.Application", "ERP.Server.Application\ERP.Server.Application.csproj", "{ADA744FE-C9DC-462A-A6AE-992D33BF3C72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Server.Infrastructure", "ERP.Server.Infrastructure\ERP.Server.Infrastructure.csproj", "{72E2A747-0CC5-459C-9930-40F91A1AEBB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.Server.Infrastructure", "ERP.Server.Infrastructure\ERP.Server.Infrastructure.csproj", "{72E2A747-0CC5-459C-9930-40F91A1AEBB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Server.WebAPI", "ERP.Server.WebAPI\ERP.Server.WebAPI.csproj", "{4BE75C8B-BBD3-42D8-AC1C-E25C0F2E012B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.Server.WebAPI", "ERP.Server.WebAPI\ERP.Server.WebAPI.csproj", "{4BE75C8B-BBD3-42D8-AC1C-E25C0F2E012B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F45449DB-32CF-49F1-B2B7-761DD44D8EF3}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
