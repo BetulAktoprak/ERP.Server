@@ -8,6 +8,7 @@ internal sealed class ApplicationDbContext(DbContextOptions options) : DbContext
 {
     public DbSet<Product> Products { get; set; }
     public DbSet<Outbox> Outboxes { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

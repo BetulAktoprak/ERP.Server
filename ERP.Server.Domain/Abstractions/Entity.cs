@@ -13,4 +13,11 @@ public abstract class Entity
     public DateTime? UpdateAt { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime? DeleteAt { get; set; }
+    public DateTime? DeletedUserId { get; set; }
+    public DateTime? DeletedUser { get; set; }
+
+    public DateTime? CreatedUserId { get; set; }
+    public DateTime? CreatedUser { get; set; }
+    public DateTime? UpdatedUserId { get; set; }
+    public DateTime? UpdatedUser { get; set; }
 }
